@@ -1,0 +1,11 @@
+<h1> <%= @task.name%> </h1>
+<p><%= @task.description%> </p>
+<p> Done?
+  <% if @task.status == false%>
+  <p> [] </p>
+  <% else %>
+  <p> [x] </p>
+  <% end %>
+</p>
+
+<%= link_to "(home)", tasks_path()%>
